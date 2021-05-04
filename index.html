@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML>
+
+  <HEAD>
+  <TITLE>homepage</TITLE>
+  <link rel="shortcut icon" href="poo-solid.svg"/>
+  <link href="css_style.css" rel="stylesheet" type="text/css">
+  </HEAD>
+  
+  <h1>彭亞綺's portfolio</h1>
+  
+  <BODY onload="Time()">
+  <audio loop autoplay>
+      <source src="菅田将暉 『虹』.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
+  <p class="para1">
+  <h3>我的經歷</h3>
+  <ul>
+    <li>畢業於<A HREF="https://web.nehs.hc.edu.tw/">國立新竹科學園區實驗高級中等學校</A></li>
+    <li>現於<A HREF="https://web.ee.ntu.edu.tw/">國立台灣大學電機工程學系</A>擔任大一學生</li>
+    
+  </ul>
+  <BR>
+  <BR>
+  <IMG SRC="images.jfif" ALT="Pikachu" width=400>
+  </p>
+ 
+  <h3>我的興趣</h3>
+  <ul>
+    <li>Music:my favorite song recently is <A HREF="https://www.youtube.com/watch?v=zSOJk7ggJts">Aimer - Kataomoi</A></li>
+    <li>Youtube:my favorite video recently is <A HREF="https://www.youtube.com/watch?v=fj9MziO1rmQ">一人だけ気合が入りまくっているハンドベル隊</A></li>
+    
+    <li>Novels:my favorite novel recently is <A HREF="https://zh.wikipedia.org/wiki/%E4%B8%89%E4%BD%93_(%E5%B0%8F%E8%AF%B4)">三體</A></li>
+  </ul>
+  <div id="showbox"></div>
+  
+  </BODY>
+  
+  </HTML>
+
+
+<script>
+  //JavaScript function
+  function Time(){
+    var time = new Date();
+    var y = time.getFullYear();
+    var m = time.getMonth()+1;
+    var d = time.getDate();
+    var hour = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+    if(sec<10){
+      document.getElementById('showbox').innerHTML=m+'-'+d+'-'+y+' '+hour+':'+min+':'+'0'+sec;
+    }
+    else {
+      document.getElementById('showbox').innerHTML=m+'-'+d+'-'+y+' '+hour+':'+min+':'+sec;
+    }
+    setInterval(Time,1000);
+}
+</script>
